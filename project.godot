@@ -19,10 +19,15 @@ config/features=PackedStringArray("4.4", "Forward Plus")
 run/max_fps=15
 config/icon="res://icon.svg"
 
+[editor]
+
+version_control/plugin_name="GitPlugin"
+version_control/autoload_on_startup=true
+
 [gui]
 
 fonts/dynamic_fonts/use_oversampling=false
-theme/custom="res://assets/theme/main-theme.tres"
+theme/custom="uid://dxpjsxjcktnp8"
 theme/default_font_antialiasing=0
 
 [input]
