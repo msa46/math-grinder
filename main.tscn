@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://pstqes7jcym2"]
+[gd_scene load_steps=7 format=3 uid="uid://pstqes7jcym2"]
 
 [ext_resource type="Script" uid="uid://dqpy8ts768gss" path="res://main.gd" id="1_nrtmp"]
+[ext_resource type="Script" uid="uid://53k3lag1awap" path="res://control.gd" id="2_h2yge"]
+[ext_resource type="FontFile" uid="uid://chhyh7r5c2ca8" path="res://assets/fonts/efforts_@somepx/EffortsPro.otf" id="3_1bvp3"]
 [ext_resource type="Shader" uid="uid://cma38na5dxh2l" path="res://assets/shaders/nokia-3310.gdshader" id="3_dhqyx"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_l502v"]
@@ -26,6 +28,25 @@ transparent_bg = true
 snap_2d_vertices_to_pixel = true
 canvas_item_default_texture_filter = 0
 size = Vector2i(84, 48)
+
+[node name="Control" type="Control" parent="Screen"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_h2yge")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Screen/Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 20.0
+theme_override_constants/separation = 4
+
+[node name="Label" type="Label" parent="Screen/Control/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_1bvp3")
+theme_override_font_sizes/font_size = 16
+text = "C6H12O6"
 
 [node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
 unique_name_in_owner = true
